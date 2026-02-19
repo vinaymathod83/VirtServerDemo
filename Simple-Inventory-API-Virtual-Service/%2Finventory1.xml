@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/inventory" method="POST" resourcePath="/inventory" id="d6c8847a-4df3-41d7-9989-809ca92ae86f">
+  <con:settings>
+    <con:setting id="d6c8847a-4df3-41d7-9989-809ca92ae86ffileName">%2Finventory1</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:requestRouteScript/>
+  <con:response name="Response 1" id="5bdfdc2b-696c-4252-9097-f66befa3c963" httpResponseStatus="201" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 2" id="a9adfba9-60d9-45fe-a9e0-16754f708fab" httpResponseStatus="400" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 3" id="f8345ff0-5962-496f-95bf-c8b4bd610c39" httpResponseStatus="409" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

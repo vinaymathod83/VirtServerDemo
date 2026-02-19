@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="de479f91-cbfa-4087-804a-ef194f9d6548" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/inventory-Request 1 Test Case" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="de479f91-cbfa-4087-804a-ef194f9d6548fileName">%2Finventory-Request-1-Test-Case1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="POST Request" id="1204c1c6-2291-4719-87f1-aeae7c3877bc">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Simple Inventory API" resourcePath="/inventory" methodName="addInventory" xsi:type="con:RestRequestStep">
+      <con:restRequest name="POST Request" id="c45e1862-6098-4151-a911-42f1f7872a07" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0</con:endpoint>
+        <con:request>{\r
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",\r
+  "name" : "Widget Adapter",\r
+  "releaseDate" : "2016-08-29T09:12:33.001Z",\r
+  "manufacturer" : {\r
+    "name" : "ACME Corporation",\r
+    "homePage" : "https://www.acme-corp.com",\r
+    "phone" : "408-867-5308"\r
+  }\r
+}</con:request>
+        <con:originalUri>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0/inventory</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c5f8c0ea-6152-4b52-919a-7c254dedc547" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200,201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="2afb4445-b146-4ff0-a59f-a8be228bbf4e" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

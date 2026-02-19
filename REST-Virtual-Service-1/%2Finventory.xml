@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction xmlns:con="http://eviware.com/soapui/config" name="/inventory" method="GET" resourcePath="/inventory" id="12d75078-c867-47c6-b591-03c081359de6">
+  <con:settings>
+    <con:setting id="12d75078-c867-47c6-b591-03c081359de6fileName">%2Finventory</con:setting>
+  </con:settings>
+  <con:defaultResponse>Response 4</con:defaultResponse>
+  <con:dispatchStyle>PARAMETER</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:parameterDispatcherRuleContainer/>
+  <con:routeEnabled>true</con:routeEnabled>
+  <con:conditionalRoutingEnabled>true</con:conditionalRoutingEnabled>
+  <con:routeScript/>
+  <con:requestRouteScript/>
+  <con:saveRoutedResponse>true</con:saveRoutedResponse>
+  <con:response name="Response 1" id="7bf6e23b-8c25-4d01-8aea-36815a2983d7" httpResponseStatus="200" mediaType="application/json" encoding="utf-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corporation",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5305"
+  }
+} ]</con:responseContent>
+    <con:header>
+      <con:name>Strict-Transport-Security</con:name>
+      <con:value>[max-age=31536000; includeSubDomains]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Methods</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Credentials</con:name>
+      <con:value>[true]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>[keep-alive]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>[Wed, 18 Feb 2026 11:13:30 GMT]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Headers</con:name>
+      <con:value>[X-Requested-With,Content-Type,Accept,Origin]</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="Response 2" id="42d1da6c-64bf-4c20-bb45-d91622468960" httpResponseStatus="200" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+  <con:response name="Response 3" id="59d7b707-8037-45a3-a730-7e2f36a8e737" httpResponseStatus="200" mediaType="application/json" encoding="utf-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corporation",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5309"
+  }
+} ]</con:responseContent>
+    <con:header>
+      <con:name>Strict-Transport-Security</con:name>
+      <con:value>[max-age=31536000; includeSubDomains]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Methods</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Credentials</con:name>
+      <con:value>[true]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>[keep-alive]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>[Wed, 18 Feb 2026 11:22:37 GMT]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Headers</con:name>
+      <con:value>[X-Requested-With,Content-Type,Accept,Origin]</con:value>
+    </con:header>
+  </con:response>
+  <con:response name="Response 4" id="2abcdbd7-6586-4b0c-8cb9-3f54132a4ace" httpResponseStatus="200" mediaType="application/json" encoding="utf-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200035a000a636f6d707265737365644c000b636f6d7072657373696f6e74003d4c636f6d2f657669776172652f736f617075692f696d706c2f737570706f72742f436f6d7072657373656456616c756524436f6d7072657373696f6e3b5b0004646174617400025b427870007e72003b636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c756524436f6d7072657373696f6e00000000000000001200007872000e6a6176612e6c616e672e456e756d000000000000000012000078707400044e4f4e4570" dataSource="">
+    <con:settings/>
+    <con:responseContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corporation",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5310"
+  }
+} ]</con:responseContent>
+    <con:header>
+      <con:name>Strict-Transport-Security</con:name>
+      <con:value>[max-age=31536000; includeSubDomains]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Origin</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Methods</con:name>
+      <con:value>[*]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Credentials</con:name>
+      <con:value>[true]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Connection</con:name>
+      <con:value>[keep-alive]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Date</con:name>
+      <con:value>[Wed, 18 Feb 2026 11:22:57 GMT]</con:value>
+    </con:header>
+    <con:header>
+      <con:name>Access-Control-Allow-Headers</con:name>
+      <con:value>[X-Requested-With,Content-Type,Accept,Origin]</con:value>
+    </con:header>
+  </con:response>
+  <con:signature name="New Signature"/>
+</con:restMockAction>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8b8e2591-151b-4736-b9d3-dbdaf5abd528" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/inventory-Request 1 Test Case" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="8b8e2591-151b-4736-b9d3-dbdaf5abd528fileName">%2Finventory-Request-1-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GET Request" id="ab3a1596-d5a1-4550-8875-40aac5e6f150">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Simple Inventory API" resourcePath="/inventory" methodName="searchInventory" xsi:type="con:RestRequestStep">
+      <con:restRequest name="GET Request" id="07086f98-bed6-4b68-9df7-b92e90abe1c6" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://localhost:8099/</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0/inventory</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="98ac4755-40df-4e8a-9f1d-2765c0051e4a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SwaggerComplianceAssertion" id="6fc84dd5-22d1-42ae-aeeb-eeb62f3de037" name="Swagger Compliance Assertion" disabled="true">
+          <con:configuration>
+            <swaggerUrl>https://api.swaggerhub.com/apis/DemoOrg_Vinay/TestAutoMock/1.0.3</swaggerUrl>
+            <strictMode>true</strictMode>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c71463ac-2a38-424e-bb2c-9242926a685c" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:environmentSpec>
+          <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:environmentSpec>
+    <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:testCase>

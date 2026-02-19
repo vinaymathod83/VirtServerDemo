@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="/inventory" path="/inventory" id="1304f479-07bc-409f-86a8-159b6edddfdf">
+  <con:settings>
+    <con:setting id="1304f479-07bc-409f-86a8-159b6edddfdffileName">%2Finventory</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="searchInventory" id="e929d0ff-75d6-46fc-9d1c-d82264c86b00" method="GET">
+    <con:description>By passing in the appropriate options, you can search for
+available inventory in the system
+</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>SEARCH</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>pass an optional search string for looking up inventory</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>skip</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>number of records to skip for pagination</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>limit</con:name>
+        <con:style>QUERY</con:style>
+        <con:description>maximum number of records to return</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description>search results matching criteria</con:description>
+      <con:sampleContent>[ {
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corpo",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5309"
+  }
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>bad input parameter</con:description>
+    </con:representation>
+    <con:request name="Request 1" id="07086f98-bed6-4b68-9df7-b92e90abe1c6" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0/inventory</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="addInventory" id="40896989-b146-4846-9cd2-f48ea84db6b1" method="POST">
+    <con:description>Adds an item to the system</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description>item created</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description>invalid input, object invalid</con:description>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:status>409</con:status>
+      <con:params/>
+      <con:description>an existing item already exists</con:description>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name" : "Widget Adapter",
+  "releaseDate" : "2016-08-29T09:12:33.001Z",
+  "manufacturer" : {
+    "name" : "ACME Corpo",
+    "homePage" : "https://www.acme-corp.com",
+    "phone" : "408-867-5309"
+  }
+}</con:sampleContent>
+    </con:representation>
+    <con:request name="Request 1" id="c45e1862-6098-4151-a911-42f1f7872a07" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0</con:endpoint>
+      <con:request>{\r
+  "id" : "d290f1ee-6c54-4b01-90e6-d701748f0851",\r
+  "name" : "Widget Adapter",\r
+  "releaseDate" : "2016-08-29T09:12:33.001Z",\r
+  "manufacturer" : {\r
+    "name" : "ACME Corpo",\r
+    "homePage" : "https://www.acme-corp.com",\r
+    "phone" : "408-867-5309"\r
+  }\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>
