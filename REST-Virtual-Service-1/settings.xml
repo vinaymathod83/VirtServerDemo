@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService xmlns:con="http://eviware.com/soapui/config" id="b04cf94d-7160-497c-a99f-d3203286fd09" port="8099" path="/" host="localhost" name="REST Virtual Service 1" addUnmatchedOperation="false" routeModeEnabled="false" routeEndpoint="https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0" routeUnmatchedOperation="false" recordedForConditionalMatch="false" routeToLive="false">
+<con:restMockService xmlns:con="http://eviware.com/soapui/config" id="b04cf94d-7160-497c-a99f-d3203286fd09" port="8099" path="/" host="localhost" name="REST Virtual Service 1" addUnmatchedOperation="true" routeModeEnabled="true" routeEndpoint="https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0" routeUnmatchedOperation="true" recordedForConditionalMatch="false" routeToLive="false">
   <con:settings>
     <con:setting id="b04cf94d-7160-497c-a99f-d3203286fd09fileName">REST-Virtual-Service-1</con:setting>
   </con:settings>

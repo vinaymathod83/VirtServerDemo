@@ -105,7 +105,7 @@ available inventory in the system
   }
 }</con:sampleContent>
     </con:representation>
-    <con:request name="Request 1" id="c45e1862-6098-4151-a911-42f1f7872a07" mediaType="application/json">
+    <con:request name="Request 1" id="c45e1862-6098-4151-a911-42f1f7872a07" mediaType="application/json" postQueryString="false">
       <con:settings/>
       <con:endpoint>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0</con:endpoint>
       <con:request>{\r
@@ -122,6 +122,7 @@ available inventory in the system
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters/>
       <con:environmentSpec>
         <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">

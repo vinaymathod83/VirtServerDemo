@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8b8e2591-151b-4736-b9d3-dbdaf5abd528" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/inventory-Request 1 Test Case" searchProperties="true" timeout="0">
+<con:testCase xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="8b8e2591-151b-4736-b9d3-dbdaf5abd528" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="/inventory-Request 1 Test Case" searchProperties="true" timeout="0">
   <con:settings>
     <con:setting id="8b8e2591-151b-4736-b9d3-dbdaf5abd528fileName">%2Finventory-Request-1-Test-Case</con:setting>
   </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="2fd01a72-20e5-4a66-8f13-a16d73bf45ef">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/vinay.ma/DataGenerator.xlsx</file>
+          <worksheet/>
+          <cell>A1</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>false</con:shared>
+      <con:restartShared>false</con:restartShared>
+      <con:property>SEARCH</con:property>
+      <con:property>skip</con:property>
+      <con:property>limit</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="GET Request" id="ab3a1596-d5a1-4550-8875-40aac5e6f150">
     <con:settings/>
-    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="Simple Inventory API" resourcePath="/inventory" methodName="searchInventory" xsi:type="con:RestRequestStep">
+    <con:config service="Simple Inventory API" resourcePath="/inventory" methodName="searchInventory" xsi:type="con:RestRequestStep">
       <con:restRequest name="GET Request" id="07086f98-bed6-4b68-9df7-b92e90abe1c6" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>http://localhost:8099/</con:endpoint>
+        <con:endpoint>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0</con:endpoint>
         <con:request/>
         <con:originalUri>https://virtserver.swaggerhub.com/DemoOrg_Vinay/SimpleDemoAPI/1.0.0/inventory</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="98ac4755-40df-4e8a-9f1d-2765c0051e4a" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="SwaggerComplianceAssertion" id="6fc84dd5-22d1-42ae-aeeb-eeb62f3de037" name="Swagger Compliance Assertion" disabled="true">
-          <con:configuration>
-            <swaggerUrl>https://api.swaggerhub.com/apis/DemoOrg_Vinay/TestAutoMock/1.0.3</swaggerUrl>
-            <strictMode>true</strictMode>
-          </con:configuration>
-        </con:assertion>
         <con:assertion type="Response SLA Assertion" id="c71463ac-2a38-424e-bb2c-9242926a685c" name="Response SLA">
           <con:configuration>
             <SLA>2000</SLA>
@@ -44,8 +53,21 @@
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="82f1a95f-b9b3-43b4-9766-ea8acab9e24d">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>GET Request</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>ab3a1596-d5a1-4550-8875-40aac5e6f150</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
   <con:environmentSpec>
     <con:entry environmentId="728e8fc0-6ee7-4a29-8588-180884dd423f">
       <con:authProfile>Inherit From Parent</con:authProfile>
